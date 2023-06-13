@@ -1,11 +1,14 @@
 import { Button, Card, Grid } from '@mui/material'
-import { useAppSelector } from 'redux/hooks'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import './ProductList.scss'
+import { addLike } from 'redux/likeReducer'
 
 type Props = {}
 const ProductList = (props: Props) => {
     const productsArrey = useAppSelector((state) => state.products) // приймаэмо масив з сховища
+
+    const dispatch = useAppDispatch()
 
     return (
         <div className="ProductList">
@@ -21,7 +24,11 @@ const ProductList = (props: Props) => {
                                     alt={product.title}
                                 />
 
-                                <Button variant="contained">
+                                <Button
+                                    onClick={() =>
+                                        dispatch(addLike(product.id))
+                                    }
+                                >
                                     <FavoriteIcon />
                                 </Button>
                                 <h5 className="ProductItem_title">
