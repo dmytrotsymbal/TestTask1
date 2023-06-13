@@ -9,6 +9,7 @@ import {
     filterByMeat,
 } from 'redux/filterFunctions/filterReducer'
 import { useState } from 'react'
+import BasicRating from 'Components/Rating/Rating'
 
 type Props = {}
 const ProductList = (props: Props) => {
@@ -133,6 +134,10 @@ const ProductList = (props: Props) => {
                                           <li>{product.ingridients.name5}</li>
                                       </ol>
                                   </div>
+
+                                  <div className="ProductItem_rating">
+                                      <BasicRating />
+                                  </div>
                               </Card>
                           </Grid>
                       ))
@@ -207,6 +212,10 @@ const ProductList = (props: Props) => {
                                                       }
                                                   </li>
                                               </ol>
+                                          </div>
+
+                                          <div className="ProductItem_rating">
+                                              <BasicRating />
                                           </div>
                                       </Card>
                                   </Grid>

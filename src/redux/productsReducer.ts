@@ -22,6 +22,12 @@ export const productsSlice = createSlice({
         builder.addCase(fetchProducts.fulfilled, (state, action) => {
             return (state = action.payload)
         })
+        builder.addCase(fetchProducts.pending, () => {
+            return console.log('pending')
+        })
+        builder.addCase(fetchProducts.rejected, () => {
+            return console.log('rejected')
+        })
     },
 })
 

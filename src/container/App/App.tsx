@@ -8,6 +8,7 @@ import { useAppDispatch } from 'redux/hooks'
 import { useEffect } from 'react'
 import { fetchProducts } from 'redux/productsReducer'
 import UniquePage from 'pages/UniquePage/UniquePage'
+import ScrollToTop from 'Utils/scrollToTop'
 type Props = {}
 
 function App(props: Props) {
@@ -21,6 +22,7 @@ function App(props: Props) {
         <>
             <CssBaseline />
             <Header />
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/favorites" element={<Favorites />} />

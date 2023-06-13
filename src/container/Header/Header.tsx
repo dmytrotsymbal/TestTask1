@@ -7,12 +7,12 @@ const Header = (props: Props) => {
     return (
         <div className="header">
             <div className="buttonsDiv">
-                <Link to="/">
+                <Link to="/" style={{ textDecoration: 'none' }}>
                     <Button className="headerButton" variant="outlined">
                         Home
                     </Button>
                 </Link>
-                <Link to="/favorites">
+                <Link to="/favorites" style={{ textDecoration: 'none' }}>
                     <Button className="headerButton" variant="outlined">
                         Favorites
                     </Button>
