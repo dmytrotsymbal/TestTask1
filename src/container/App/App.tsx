@@ -7,6 +7,7 @@ import Favorites from 'pages/Favorites/Favorites'
 import { useAppDispatch } from 'redux/hooks'
 import { useEffect } from 'react'
 import { fetchProducts } from 'redux/productsReducer'
+import UniquePage from 'pages/UniquePage/UniquePage'
 type Props = {}
 
 function App(props: Props) {
@@ -23,6 +24,7 @@ function App(props: Props) {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/favorites" element={<Favorites />} />
+                <Route path="/unique/:id" element={<UniquePage />} />
             </Routes>
             <Footer />
         </>

@@ -7,6 +7,7 @@ import { removeLike } from 'redux/likeReducer'
 import { useAppDispatch } from 'redux/hooks'
 import './FavoriteItem.scss'
 import BasicRating from 'Components/Rating/Rating'
+import { Link } from 'react-router-dom'
 
 type Props = {
     product: Products
@@ -25,6 +26,11 @@ const FavoriteItem = ({ product }: Props) => {
                     />
 
                     <h5 className="favoriteCard_title">{product.title}</h5>
+
+                    <h6 className="favoriteCard_category">
+                        Категорія: <span>{product.category}</span>{' '}
+                    </h6>
+
                     <p className="favoriteCard_description">
                         {product.description}
                     </p>
@@ -55,12 +61,14 @@ const FavoriteItem = ({ product }: Props) => {
                     <DeleteIcon />
                 </Button>
 
-                <Button
-                    className="favoriteCard_StartCooking_button"
-                    variant="contained"
-                >
-                    Start Cooking
-                </Button>
+                <Link to={`/unique/${product.id}`}>
+                    <Button
+                        className="favoriteCard_StartCooking_button"
+                        variant="contained"
+                    >
+                        Start Cooking
+                    </Button>
+                </Link>
             </Card>
         </>
     )

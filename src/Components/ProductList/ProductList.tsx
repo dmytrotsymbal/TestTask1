@@ -112,6 +112,10 @@ const ProductList = (props: Props) => {
                                       {product.title}
                                   </h5>
 
+                                  <h6 className="ProductItem_category">
+                                      Категорія: <span>{product.category}</span>
+                                  </h6>
+
                                   <p className="ProductItem_description">
                                       {product.description}
                                   </p>
