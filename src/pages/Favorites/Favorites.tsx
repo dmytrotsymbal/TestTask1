@@ -26,10 +26,12 @@ const Favorites = (props: Props) => {
     return (
         <div className="Favorites">
             <Container sx={{ padding: '20px 0' }}>
-                <h2 style={{ textAlign: 'center' }}>Улюблені</h2>
+                <h2 style={{ textAlign: 'center' }}>Улюблене</h2>
 
                 {Object.keys(productsInFavRedux).length === 0 ? (
-                    <h3>Ви нічого не додали в "Улюблене"</h3>
+                    <h3 style={{ textAlign: 'center' }}>
+                        Ви нічого не додали в "Улюблене"
+                    </h3>
                 ) : (
                     <Grid container spacing={2}>
                         {Object.keys(productsInFavRedux).map((itemId) => (

@@ -42,6 +42,22 @@
         bottom: 0px;
         right: 0px;
     }
+
+    .favoriteCard_rating {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 50px;
+        right: 10px;
+    }
+
+    .favoriteCard_StartCooking_button {
+        position: absolute;
+        bottom: 5px;
+        width: 170px;
+        left: calc(50% - 170px / 2);
+    }
 }
 
 #favoriteCard:hover {

@@ -6,6 +6,7 @@ import DeleteIcon from '@mui/icons-material/Delete'
 import { removeLike } from 'redux/likeReducer'
 import { useAppDispatch } from 'redux/hooks'
 import './FavoriteItem.scss'
+import BasicRating from 'Components/Rating/Rating'
 
 type Props = {
     product: Products
@@ -41,6 +42,10 @@ const FavoriteItem = ({ product }: Props) => {
                             <li>{product.ingridients.name5}</li>
                         </ol>
                     </div>
+
+                    <div className="favoriteCard_rating">
+                        <BasicRating />
+                    </div>
                 </CardContent>
 
                 <Button
@@ -48,6 +53,13 @@ const FavoriteItem = ({ product }: Props) => {
                     className="favoriteCard_button"
                 >
                     <DeleteIcon />
+                </Button>
+
+                <Button
+                    className="favoriteCard_StartCooking_button"
+                    variant="contained"
+                >
+                    Start Cooking
                 </Button>
             </Card>
         </>
