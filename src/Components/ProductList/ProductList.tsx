@@ -21,37 +21,73 @@ const ProductList = (props: Props) => {
     const showAll = () => {
         setShowAllProducts(true)
     }
+
+    const [titleName, setTitleName] = useState<string>('Всі рецети')
+
+    const changeTitleToAll = () => {
+        setTitleName('Всі рецети')
+    }
+
+    const changeTitleToMeat = () => {
+        setTitleName("М'ясні рецети")
+    }
+
+    const changeTitleToFish = () => {
+        setTitleName('Рибні рецети')
+    }
+
+    const changeTitleToSugar = () => {
+        setTitleName('Десерти')
+    }
     return (
         <div className="ProductList">
-            <h2 style={{ textAlign: 'center' }}>Всі рецети</h2>
-
             <div className="filterPanel">
-                <Button onClick={showAll}>Всі страви</Button>
                 <Button
+                    className="filterBtns"
+                    variant="outlined"
+                    onClick={() => {
+                        showAll()
+                        changeTitleToAll()
+                    }}
+                >
+                    Всі страви
+                </Button>
+                <Button
+                    className="filterBtns"
+                    variant="outlined"
                     onClick={() => {
                         setShowAllProducts(false)
+                        changeTitleToMeat()
                         dispatch(filterByMeat())
                     }}
                 >
                     М'ясні страви
                 </Button>
                 <Button
+                    className="filterBtns"
+                    variant="outlined"
                     onClick={() => {
                         setShowAllProducts(false)
+                        changeTitleToFish()
                         dispatch(filterByFish())
                     }}
                 >
                     Рибні страви
                 </Button>
                 <Button
+                    className="filterBtns"
+                    variant="outlined"
                     onClick={() => {
                         setShowAllProducts(false)
+                        changeTitleToSugar()
                         dispatch(filterBySugar())
                     }}
                 >
                     Десерти
                 </Button>
             </div>
+
+            <h2 style={{ textAlign: 'center' }}>{titleName}</h2>
 
             <Grid container spacing={2}>
                 {showAllProducts

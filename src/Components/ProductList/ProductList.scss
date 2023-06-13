@@ -1,6 +1,19 @@
 .ProductList {
     margin-top: 50px;
 
+    .filterPanel {
+        width: 700px;
+        height: 70px;
+        margin-left: calc(50% - 700px / 2);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .filterBtns {
+            width: 150px;
+        }
+    }
+
     .ProductItem {
         background-color: beige;
         position: relative;
