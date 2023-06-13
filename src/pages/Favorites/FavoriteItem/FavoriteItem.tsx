@@ -3,10 +3,9 @@ import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
 import DeleteIcon from '@mui/icons-material/Delete'
-import './FavoriteItem.scss'
-
 import { removeLike } from 'redux/likeReducer'
 import { useAppDispatch } from 'redux/hooks'
+import './FavoriteItem.scss'
 
 type Props = {
     product: Products
@@ -16,18 +15,37 @@ const FavoriteItem = ({ product }: Props) => {
 
     return (
         <>
-            <Card className="favoriteCard" variant="outlined">
+            <Card id="favoriteCard" variant="outlined">
                 <CardContent>
                     <img
                         className="favoriteCard_img"
                         src={product.images}
                         alt={product.images}
                     />
+
+                    <h5 className="favoriteCard_title">{product.title}</h5>
+                    <p className="favoriteCard_description">
+                        {product.description}
+                    </p>
+
+                    <p className="favoriteCard_extraDesc1">
+                        {product.extraDesc1}
+                    </p>
+
+                    <div className="favoriteCard_ingridients">
+                        <ol>
+                            <li>{product.ingridients.name1}</li>
+                            <li>{product.ingridients.name2}</li>
+                            <li>{product.ingridients.name3}</li>
+                            <li>{product.ingridients.name4}</li>
+                            <li>{product.ingridients.name5}</li>
+                        </ol>
+                    </div>
                 </CardContent>
 
                 <Button
                     onClick={() => dispatch(removeLike(product.id))}
-                    className="deteleFavoriteCard"
+                    className="favoriteCard_button"
                 >
                     <DeleteIcon />
                 </Button>

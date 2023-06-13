@@ -1,6 +1,49 @@
-.favoriteCard {
+#favoriteCard {
+    background-color: beige;
+    position: relative;
+    min-height: 350px;
+
     .favoriteCard_img {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
+        position: absolute;
     }
+
+    .favoriteCard_title {
+        position: absolute;
+        left: 240px;
+        top: 0px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .favoriteCard_description {
+        position: absolute;
+        left: 240px;
+        top: 60px;
+        font-size: 14px;
+    }
+
+    .favoriteCard_extraDesc1 {
+        position: absolute;
+        left: 240px;
+        top: 130px;
+        font-size: 12px;
+        font-style: italic;
+    }
+
+    .favoriteCard_ingridients {
+        position: absolute;
+        top: 210px;
+    }
+
+    .favoriteCard_button {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+    }
+}
+
+#favoriteCard:hover {
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
 }

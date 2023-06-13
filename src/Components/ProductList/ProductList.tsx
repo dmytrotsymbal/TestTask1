@@ -25,6 +25,7 @@ const ProductList = (props: Props) => {
                                 />
 
                                 <Button
+                                    className="ProductItem_button"
                                     onClick={() =>
                                         dispatch(addLike(product.id))
                                     }
@@ -39,7 +40,11 @@ const ProductList = (props: Props) => {
                                     {product.description}
                                 </p>
 
-                                <div>
+                                <p className="ProductItem_extraDesc1">
+                                    {product.extraDesc1}
+                                </p>
+
+                                <div className="ProductItem_ingridients">
                                     <ol>
                                         <li>{product.ingridients.name1}</li>
                                         <li>{product.ingridients.name2}</li>
