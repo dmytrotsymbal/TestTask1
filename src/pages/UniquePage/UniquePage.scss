@@ -1,0 +1,40 @@
+.UniquePage {
+    background-color: bisque;
+
+    .UniquePage__title {
+        font-size: 20px;
+    }
+
+    .UniquePage__category {
+        font-size: 15px;
+    }
+
+    .UniquePage__image {
+        width: 500px;
+        margin-left: calc(50% - 500px / 2);
+    }
+
+    .buttonsBlock {
+        width: 500px;
+        margin-left: calc(50% - 500px / 2);
+        margin-top: 40px;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(236, 212, 183);
+
+        .buttonsBlock__button {
+            width: 170px;
+            background-color: white;
+        }
+    }
+
+    .cookingBlock {
+        background-color: rgb(236, 212, 183);
+
+        .cookingBlock__title {
+            font-size: 20px;
+        }
+    }
+}
