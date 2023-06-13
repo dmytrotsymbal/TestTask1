@@ -4,9 +4,18 @@ import Footer from 'container/Footer/Footer'
 import Home from 'pages/Home/Home'
 import { Route, Routes } from 'react-router-dom'
 import Favorites from 'pages/Favorites/Favorites'
+import { useAppDispatch } from 'redux/hooks'
+import { useEffect } from 'react'
+import { fetchProducts } from 'redux/productsReducer'
 type Props = {}
 
 function App(props: Props) {
+    const dispatch = useAppDispatch()
+
+    useEffect(() => {
+        dispatch(fetchProducts())
+    })
+
     return (
         <>
             <CssBaseline />

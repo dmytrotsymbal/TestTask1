@@ -1,0 +1,16 @@
+.ProductList {
+    margin-top: 50px;
+
+    .ProductItem {
+        background-color: rgb(236, 234, 234);
+
+        .ProductItem_img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    // .ProductItem:hover {
+    //     box-shadow: 0 2 2px rgb(71, 63, 63);
+    // }
+}
